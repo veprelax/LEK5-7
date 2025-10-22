@@ -27,13 +27,11 @@
 
 ### Крок 2: Підключення віддаленого репозиторію
 
-Після створення репозиторію GitHub покаже вам URL. Скопіюйте його та виконайте:
+Виконайте наступну команду для підключення вашого GitHub репозиторію:
 
 ```bash
-git remote add origin https://github.com/ВАШ_USERNAME/LEK5-7.git
+git remote add origin https://github.com/veprelax/LEK5-7.git
 ```
-
-**Замініть** `ВАШ_USERNAME` на ваше ім'я користувача GitHub!
 
 ### Крок 3: Перевірка віддаленого репозиторію
 
@@ -43,8 +41,8 @@ git remote -v
 
 Ви повинні побачити:
 ```
-origin  https://github.com/ВАШ_USERNAME/LEK5-7.git (fetch)
-origin  https://github.com/ВАШ_USERNAME/LEK5-7.git (push)
+origin  https://github.com/veprelax/LEK5-7.git (fetch)
+origin  https://github.com/veprelax/LEK5-7.git (push)
 ```
 
 ### Крок 4: Запуш коду на GitHub
@@ -72,7 +70,7 @@ git push -u origin main
    - Folder: `/ (root)`
 5. Натисніть "Save"
 6. Зачекайте 1-2 хвилини
-7. GitHub покаже посилання на вашу сторінку: `https://ВАШ_USERNAME.github.io/LEK5-7/`
+7. GitHub покаже посилання на вашу сторінку: `https://veprelax.github.io/LEK5-7/`
 
 ### Крок 6: Перевірка сторінки
 
@@ -112,8 +110,8 @@ Labels: bug
 
 Після виконання всіх кроків, надішліть два посилання:
 
-1. **GitHub Repository**: `https://github.com/ВАШ_USERNAME/LEK5-7`
-2. **GitHub Pages**: `https://ВАШ_USERNAME.github.io/LEK5-7/`
+1. **GitHub Repository**: `https://github.com/veprelax/LEK5-7`
+2. **GitHub Pages**: `https://veprelax.github.io/LEK5-7/`
 
 ---
 
