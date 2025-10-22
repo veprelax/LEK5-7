@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця з вкладеною дочірньою таблицею</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Батьківська таблиця */
+        .parent-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .parent-table td {
+            border: 3px solid #2c3e50;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            background: linear-gradient(145deg, #74b9ff, #0984e3);
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Звичайні клітинки батьківської таблиці */
+        .parent-table td:not(.tall-cell) {
+            height: 50px;
+            width: 33.33%;
+        }
+        
+        /* Висока клітинка з вкладеною таблицею */
+        .tall-cell {
+            height: 200px;
+            width: 60%;
+            background: linear-gradient(145deg, #ff6b6b, #ee5a24);
+            position: relative;
+        }
+        
+        /* Клітинка з меншою шириною */
+        .narrow-cell {
+            width: 28%;
+        }
+        
+        /* Дочірня (вкладена) таблиця */
+        .child-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+        
+        .child-table td {
+            border: 2px solid #2c3e50;
+            text-align: center;
+            vertical-align: middle;
+            padding: 8px;
+            height: 40px;
+            width: 33.33%;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .child-table td:nth-child(1) {
+            background: linear-gradient(145deg, #a29bfe, #6c5ce7);
+        }
+        
+        .child-table td:nth-child(2) {
+            background: linear-gradient(145deg, #00b894, #00a085);
+        }
+        
+        .child-table td:nth-child(3) {
+            background: linear-gradient(145deg, #fdcb6e, #e17055);
+        }
+        
+        .table-label {
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            display: block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Батьківська таблиця з вкладеною дочірньою таблицею</h1>
+    
+    <table class="parent-table">
+        <tr>
+            <td>Клітинка 1</td>
+            <td rowspan="2" class="tall-cell">
+                <span class="table-label">Висока клітинка (200px)</span>
+                <table class="child-table">
+                    <tr>
+                        <td>Дочірня 1</td>
+                        <td>Дочірня 2</td>
+                        <td>Дочірня 3</td>
+                    </tr>
+                    <tr>
+                        <td>Дочірня 4</td>
+                        <td>Дочірня 5</td>
+                        <td>Дочірня 6</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="narrow-cell">Клітинка 3</td>
+        </tr>
+        <tr>
+            <td>Клітинка 4</td>
+            <td class="narrow-cell">Клітинка 6</td>
+        </tr>
+        <tr>
+            <td>Клітинка 7</td>
+            <td>Клітинка 8</td>
+            <td class="narrow-cell">Клітинка 9</td>
+        </tr>
+    </table>
+    
+    <div style="text-align: center; margin-top: 20px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+        <p><strong>Параметри:</strong></p>
+        <p>Батьківська таблиця: 80% ширина, висока клітинка 200px</p>
+        <p>Дочірня таблиця: вкладена всередині високої клітинки</p>
+    </div>
+</body>
+</html>
