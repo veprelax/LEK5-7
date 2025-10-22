@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця з різними висотами клітинок</title>
+    <style>
+        table {
+            width: 75%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        
+        td {
+            width: 33.33%;
+            height: 50px;
+            border: 2px solid #333;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            background-color: #ffff00;
+        }
+        
+        .tall-cell {
+            height: 200px;
+            background-color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблиця з різними висотами клітинок</h1>
+    
+    <table>
+        <tr>
+            <td>Сонце</td>
+            <td rowspan="2" class="tall-cell">Золото<br>(200px)</td>
+            <td>Лимон</td>
+        </tr>
+        <tr>
+            <td>Канарейка</td>
+            <td>Пісок</td>
+        </tr>
+        <tr>
+            <td>Місяць</td>
+            <td>Зірка</td>
+            <td>Вогонь</td>
+        </tr>
+    </table>
+</body>
+</html>
+
