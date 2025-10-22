@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Таблиці - Головна сторінка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .intro h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .intro p {
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+
+        .card-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .card p {
+            text-align: center;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .features h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Проєкт HTML Таблиці</h1>
+        <p class="subtitle">Навчальний проєкт з вивчення HTML таблиць</p>
+
+        <div class="intro">
+            <h2>Вітаємо! 👋</h2>
+            <p>
+                Цей проєкт демонструє різні можливості роботи з HTML таблицями. 
+                Тут ви знайдете три унікальні приклади, кожен з яких показує різні 
+                техніки створення та стилізації таблиць за допомогою HTML та CSS.
+            </p>
+        </div>
+
+        <div class="cards">
+            <a href="table1.html" class="card">
+                <div class="card-icon">🟡</div>
+                <h3>Таблиця з різними висотами</h3>
+                <p>Демонстрація rowspan та різних висот клітинок. Жовта кольорова схема з тематичним контентом.</p>
+            </a>
+
+            <a href="table2.html" class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Вкладена таблиця</h3>
+                <p>Складна структура з дочірньою таблицею всередині. Красиві градієнти та сучасний дизайн.</p>
+            </a>
+
+            <a href="table3.html" class="card">
+                <div class="card-icon">🖼️</div>
+                <h3>Таблиця Мондріана</h3>
+                <p>Художня композиція в стилі неопластицизму. Використання rowspan та colspan для створення мистецтва.</p>
+            </a>
+        </div>
+
+        <div class="features">
+            <h2>✨ Ключові особливості проєкту</h2>
+            <ul>
+                <li>Адаптивний дизайн для всіх пристроїв</li>
+                <li>Сучасна стилізація з CSS3 градієнтами та ефектами</li>
+                <li>Семантична HTML5 розмітка</li>
+                <li>Українська локалізація всього контенту</li>
+                <li>Практичні приклади використання rowspan та colspan</li>
+                <li>Демонстрація вкладених таблиць</li>
+                <li>Креативні дизайнерські рішення</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Навчальний проєкт</strong></p>
+            <p>Курс: Веб-розробка | Тема: HTML таблиці та Git</p>
+            <p>© 2025 | Створено з ❤️ для навчання</p>
+        </div>
+    </div>
+</body>
+</html>
+
