@@ -19,7 +19,7 @@
 2. Натисніть на "+" у верхньому правому куті
 3. Виберіть "New repository"
 4. Заповніть форму:
-   - **Repository name**: `Shevchenko1` (або інша назва)
+   - **Repository name**: `LEK5-7`
    - **Description**: "HTML Tables Project - Навчальний проєкт з таблицями"
    - **Visibility**: Public (щоб використати GitHub Pages)
    - **НЕ вибирайте** "Initialize this repository with a README" (у вас вже є README)
@@ -30,7 +30,7 @@
 Після створення репозиторію GitHub покаже вам URL. Скопіюйте його та виконайте:
 
 ```bash
-git remote add origin https://github.com/ВАШ_USERNAME/Shevchenko1.git
+git remote add origin https://github.com/ВАШ_USERNAME/LEK5-7.git
 ```
 
 **Замініть** `ВАШ_USERNAME` на ваше ім'я користувача GitHub!
@@ -43,8 +43,8 @@ git remote -v
 
 Ви повинні побачити:
 ```
-origin  https://github.com/ВАШ_USERNAME/Shevchenko1.git (fetch)
-origin  https://github.com/ВАШ_USERNAME/Shevchenko1.git (push)
+origin  https://github.com/ВАШ_USERNAME/LEK5-7.git (fetch)
+origin  https://github.com/ВАШ_USERNAME/LEK5-7.git (push)
 ```
 
 ### Крок 4: Запуш коду на GitHub
@@ -72,7 +72,7 @@ git push -u origin main
    - Folder: `/ (root)`
 5. Натисніть "Save"
 6. Зачекайте 1-2 хвилини
-7. GitHub покаже посилання на вашу сторінку: `https://ВАШ_USERNAME.github.io/Shevchenko1/`
+7. GitHub покаже посилання на вашу сторінку: `https://ВАШ_USERNAME.github.io/LEK5-7/`
 
 ### Крок 6: Перевірка сторінки
 
@@ -112,8 +112,8 @@ Labels: bug
 
 Після виконання всіх кроків, надішліть два посилання:
 
-1. **GitHub Repository**: `https://github.com/ВАШ_USERNAME/Shevchenko1`
-2. **GitHub Pages**: `https://ВАШ_USERNAME.github.io/Shevchenko1/`
+1. **GitHub Repository**: `https://github.com/ВАШ_USERNAME/LEK5-7`
+2. **GitHub Pages**: `https://ВАШ_USERNAME.github.io/LEK5-7/`
 
 ---
 
