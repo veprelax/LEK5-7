@@ -12,46 +12,114 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Georgia', 'Segoe UI', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 25%, #ffd6eb 50%, #ffcce5 75%, #ffc2e0 100%);
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: "✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀";
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 2em;
+            color: #ff69b4;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        body::after {
+            content: "❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿";
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 2em;
+            color: #ff69b4;
+            opacity: 0.3;
+            pointer-events: none;
         }
 
         .container {
             max-width: 900px;
             width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(145deg, #ffffff 0%, #fff5fb 100%);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3), 0 0 0 3px #ffb3d9;
             padding: 50px;
+            border: 3px solid #ffe0f0;
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
+            background: linear-gradient(135deg, #ff69b4, #ff1493, #c71585);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 15px;
             font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+            font-weight: bold;
+            position: relative;
+        }
+        
+        h1::before {
+            content: "🌸";
+            position: absolute;
+            left: -60px;
+            font-size: 1.2em;
+        }
+        
+        h1::after {
+            content: "🌸";
+            position: absolute;
+            right: -60px;
+            font-size: 1.2em;
         }
 
         .subtitle {
             text-align: center;
-            color: #7f8c8d;
+            color: #c71585;
             margin-bottom: 40px;
             font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        .subtitle::before {
+            content: "💕 ";
+        }
+        
+        .subtitle::after {
+            content: " 💕";
         }
 
         .intro {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffb3d9 0%, #ff99cc 50%, #ff80bf 100%);
             color: white;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 30px;
+            border-radius: 25px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+            border: 2px solid #ffcceb;
+            position: relative;
+        }
+        
+        .intro::before {
+            content: "✨";
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2em;
         }
 
         .intro h2 {
@@ -72,20 +140,39 @@
         }
 
         .card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
+            background: linear-gradient(135deg, #fff0f8 0%, #ffe6f2 50%, #ffdcec 100%);
+            border-radius: 25px;
             padding: 30px;
             text-decoration: none;
-            color: #2c3e50;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid transparent;
+            color: #c71585;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+            border: 3px solid #ffb3d9;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "♡";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            color: #ffb3d9;
+            opacity: 0.5;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            border-color: #667eea;
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4);
+            border-color: #ff69b4;
+            background: linear-gradient(135deg, #ffe6f2 0%, #ffdcec 50%, #ffd2e6 100%);
+        }
+        
+        .card:hover::before {
+            content: "♥";
+            color: #ff69b4;
+            opacity: 1;
         }
 
         .card-icon {
@@ -98,26 +185,39 @@
             text-align: center;
             margin-bottom: 12px;
             font-size: 1.3em;
+            color: #ff1493;
+            font-weight: bold;
         }
 
         .card p {
             text-align: center;
-            color: #555;
+            color: #c71585;
             font-size: 0.95em;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .features {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #fff5fb 0%, #ffebf5 100%);
+            padding: 30px;
+            border-radius: 25px;
             margin-bottom: 30px;
+            border: 2px solid #ffd6eb;
+            box-shadow: 0 5px 15px rgba(255, 182, 217, 0.2);
         }
 
         .features h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+            color: #ff1493;
+            margin-bottom: 25px;
             text-align: center;
+            font-weight: bold;
+        }
+        
+        .features h2::before {
+            content: "🌺 ";
+        }
+        
+        .features h2::after {
+            content: " 🌺";
         }
 
         .features ul {
@@ -126,31 +226,54 @@
         }
 
         .features li {
-            padding: 10px 0 10px 30px;
+            padding: 10px 0 10px 35px;
             position: relative;
-            color: #555;
-            line-height: 1.6;
+            color: #c71585;
+            line-height: 1.8;
         }
 
         .features li:before {
-            content: "✓";
+            content: "🌸";
             position: absolute;
             left: 0;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         .footer {
             text-align: center;
-            color: #7f8c8d;
+            color: #ff69b4;
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
+            border-top: 3px solid #ffb3d9;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: "🦋";
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            font-size: 1.5em;
+            animation: flutter 3s ease-in-out infinite;
+        }
+        
+        .footer::after {
+            content: "🦋";
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 1.5em;
+            animation: flutter 3s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes flutter {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         .footer p {
-            margin: 5px 0;
+            margin: 8px 0;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
@@ -170,11 +293,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>📊 Проєкт HTML Таблиці</h1>
-        <p class="subtitle">Навчальний проєкт з вивчення HTML таблиць</p>
+        <h1>✨ Проєкт HTML Таблиці ✨</h1>
+        <p class="subtitle">Чарівний навчальний проєкт з HTML таблиць</p>
 
         <div class="intro">
-            <h2>Вітаємо! 👋</h2>
+            <h2>Вітаємо! 💖</h2>
             <p>
                 Цей проєкт демонструє різні можливості роботи з HTML таблицями. 
                 Тут ви знайдете три унікальні приклади, кожен з яких показує різні 
@@ -184,21 +307,21 @@
 
         <div class="cards">
             <a href="table1.html" class="card">
-                <div class="card-icon">🟡</div>
+                <div class="card-icon">🌻</div>
                 <h3>Таблиця з різними висотами</h3>
-                <p>Демонстрація rowspan та різних висот клітинок. Жовта кольорова схема з тематичним контентом.</p>
+                <p>Демонстрація rowspan та різних висот клітинок. Сонячна кольорова схема з тематичним контентом.</p>
             </a>
 
             <a href="table2.html" class="card">
-                <div class="card-icon">🎨</div>
+                <div class="card-icon">🌷</div>
                 <h3>Вкладена таблиця</h3>
-                <p>Складна структура з дочірньою таблицею всередині. Красиві градієнти та сучасний дизайн.</p>
+                <p>Чарівна структура з дочірньою таблицею всередині. Красиві градієнти та ніжний дизайн.</p>
             </a>
 
             <a href="table3.html" class="card">
-                <div class="card-icon">🖼️</div>
+                <div class="card-icon">🎀</div>
                 <h3>Таблиця Мондріана</h3>
-                <p>Художня композиція в стилі неопластицизму. Використання rowspan та colspan для створення мистецтва.</p>
+                <p>Художня композиція в стилі неопластицизму. Використання rowspan та colspan для створення красивої мозаїки.</p>
             </a>
         </div>
 
@@ -218,7 +341,7 @@
         <div class="footer">
             <p><strong>Навчальний проєкт</strong></p>
             <p>Курс: Веб-розробка | Тема: HTML таблиці та Git</p>
-            <p>© 2025 | Створено з ❤️ для навчання</p>
+            <p>© 2025 | Створено з 💖 і натхненням для навчання</p>
         </div>
     </div>
 </body>
